@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    var cities = (QuickTypeCity.Welcome[])ViewData["Welcome"];
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <table border="1" width="90%">
+        <tr>
+            <th>Country</th>
+            <th>GeoNameId</th>
+            <th>Name</th>
+            <th>SubCountry</th>
+        </tr>
+        @{
+            @foreach (QuickTypeCity.Welcome city in cities)
+            {
+                <tr>
+                    <td>@city.Country</td>
+                    <td>@city.Geonameid</td>
+                    <td>@city.Name</td>
+                    <td>@city.Subcountry</td>
+                </tr>
+            }
+        }
+    </table>
+    <br />
+</div>
