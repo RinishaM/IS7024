@@ -28,6 +28,7 @@ namespace AirportDictionary.Pages
             //This can be taken as a form input from the user.
             string requiredCity = "Cincinnati";
             List<Airport> airportsOfRequiredCity = new List<Airport>();
+            City newCity = new City();
 
             string cityJson = GetData("https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json");
             City[] allCity = City.FromJson(cityJson);
@@ -42,8 +43,16 @@ namespace AirportDictionary.Pages
                     airportsOfRequiredCity.Add(airport);
                 }
             }
+
+            foreach (City city in allCity)
+            {
+                if (city.Name == requiredCity)
+                {
+                    newCity = city;
+                }
+            }
             ViewData["RequiredAirports"] = airportsOfRequiredCity;
-            ViewData["Message"] = "Airports of " + requiredCity;
+            ViewData["City"] = newCity;
         }
         public string GetData(string endpoint)
         {

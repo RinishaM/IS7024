@@ -3,11 +3,12 @@
 @{
     ViewData["Title"] = "Home page";
     List<QuickTypeAirport.Airport> requiredAirports = (List<QuickTypeAirport.Airport>)ViewData["RequiredAirports"];
-    var message = ViewData["Message"];
+    QuickTypeCity.City city = (QuickTypeCity.City)ViewData["City"];
 }
 
 <div class="text-center">
-    <h2 class="display-4">@message</h2>
+    <h2 class="display-4">Airport Dictionary</h2>
+    <h4>@city.Name, @city.Country, @city.Subcountry</h4>
     <br/>
     <table class="table table-bordered table-striped">
         <tr>
