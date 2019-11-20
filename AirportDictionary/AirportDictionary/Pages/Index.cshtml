@@ -2,27 +2,29 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    var cities = (QuickTypeCity.Welcome[])ViewData["Welcome"];
+    List<QuickTypeAirport.Airport> requiredAirports = (List<QuickTypeAirport.Airport>)ViewData["RequiredAirports"];
+    QuickTypeCity.City city = (QuickTypeCity.City)ViewData["City"];
 }
 
-
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <table border="1" width="90%">
+    <h2 class="display-4">Airport Dictionary</h2>
+    <h4>@city.Name, @city.Country, @city.Subcountry</h4>
+    <br/>
+    <table class="table table-bordered table-striped">
         <tr>
-            <th>Country</th>
-            <th>GeoNameId</th>
-            <th>Name</th>
-            <th>SubCountry</th>
+            <th>Airport Name</th>
+            <th>Type</th>
+            <th>Local Code</th>
+            <th>Elevation (in ft.)</th>
         </tr>
         @{
-            @foreach (QuickTypeCity.Welcome city in cities)
+            @foreach (QuickTypeAirport.Airport airport in requiredAirports)
             {
                 <tr>
-                    <td>@city.Country</td>
-                    <td>@city.Geonameid</td>
-                    <td>@city.Name</td>
-                    <td>@city.Subcountry</td>
+                    <td>@airport.Name</td>
+                    <td>@airport.Type</td>
+                    <td>@airport.LocalCode</td>
+                    <td>@airport.ElevationFt</td>
                 </tr>
             }
         }
