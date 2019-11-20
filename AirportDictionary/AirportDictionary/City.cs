@@ -10,12 +10,11 @@ namespace QuickTypeCity
 {
     using System;
     using System.Collections.Generic;
-
     using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class Welcome
+    public partial class City
     {
         [JsonProperty("country")]
         public string Country { get; set; }
@@ -30,14 +29,14 @@ namespace QuickTypeCity
         public string Subcountry { get; set; }
     }
 
-    public partial class Welcome
+    public partial class City
     {
-        public static Welcome[] FromJson(string json) => JsonConvert.DeserializeObject<Welcome[]>(json, QuickTypeCity.Converter.Settings);
+        public static City[] FromJson(string json) => JsonConvert.DeserializeObject<City[]>(json, QuickTypeCity.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Welcome[] self) => JsonConvert.SerializeObject(self, QuickTypeCity.Converter.Settings);
+        public static string ToJson(this City[] self) => JsonConvert.SerializeObject(self, QuickTypeCity.Converter.Settings);
     }
 
     internal static class Converter

@@ -12116,23 +12116,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rinisha\\.nuget\\packages\\": {},
+    "C:\\Users\\Parnika\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Web_Development\\GitHub\\IS7024\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
+      "projectUniqueName": "C:\\Users\\Parnika\\Source\\Repos\\IS7024\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
       "projectName": "AirportDictionary",
-      "projectPath": "D:\\Web_Development\\GitHub\\IS7024\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
-      "packagesPath": "C:\\Users\\Rinisha\\.nuget\\packages\\",
-      "outputPath": "D:\\Web_Development\\GitHub\\IS7024\\AirportDictionary\\AirportDictionary\\obj\\",
+      "projectPath": "C:\\Users\\Parnika\\Source\\Repos\\IS7024\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
+      "packagesPath": "C:\\Users\\Parnika\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Parnika\\Source\\Repos\\IS7024\\AirportDictionary\\AirportDictionary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rinisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Parnika\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
