@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Web_Development\\GitHub\\IS7024\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {}
+    "C:\\Users\\bha28\\Desktop\\MS IS\\Fall 2019\\Flex 2\\XML\\Project\\review\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {}
   },
   "projects": {
-    "D:\\Web_Development\\GitHub\\IS7024\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {
+    "C:\\Users\\bha28\\Desktop\\MS IS\\Fall 2019\\Flex 2\\XML\\Project\\review\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Web_Development\\GitHub\\IS7024\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
+        "projectUniqueName": "C:\\Users\\bha28\\Desktop\\MS IS\\Fall 2019\\Flex 2\\XML\\Project\\review\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
         "projectName": "AirportDictionary",
-        "projectPath": "D:\\Web_Development\\GitHub\\IS7024\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
-        "packagesPath": "C:\\Users\\Rinisha\\.nuget\\packages\\",
-        "outputPath": "D:\\Web_Development\\GitHub\\IS7024\\AirportDictionary\\AirportDictionary\\obj\\",
+        "projectPath": "C:\\Users\\bha28\\Desktop\\MS IS\\Fall 2019\\Flex 2\\XML\\Project\\review\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
+        "packagesPath": "C:\\Users\\bha28\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bha28\\Desktop\\MS IS\\Fall 2019\\Flex 2\\XML\\Project\\review\\AirportDictionary\\AirportDictionary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rinisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bha28\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
