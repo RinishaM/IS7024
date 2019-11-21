@@ -20,32 +20,42 @@ namespace AirportDictionary.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public JsonResult OnGet()
         {
 
-            using (var webClient = new System.Net.WebClient())
-            {
-
-                string cityJson = webClient.DownloadString("https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json");
+                string cityJson = getJsonData("https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json");
                 QuickTypeCity.Welcome[] allCity = QuickTypeCity.Welcome.FromJson(cityJson);
 
-                ViewData["Welcome"] = allCity;
+                
 
                
 
-                string airportJson = webClient.DownloadString("https://pkgstore.datahub.io/core/airport-codes/airport-codes_json/data/552f9a534537e5a2f7a8b0584dad7e77/airport-codes_json.json");
+                string airportJson = getJsonData("https://pkgstore.datahub.io/core/airport-codes/airport-codes_json/data/552f9a534537e5a2f7a8b0584dad7e77/airport-codes_json.json");
                 var allAirport = QuickTypeAirport.Airport.FromJson(airportJson);
 
-               
 
 
 
 
+                return new JsonResult(allCity);
 
 
+            
+        }
+
+        private string getJsonData(string url)
+        {
+            using (var webClient = new System.Net.WebClient())
+            {
+                return webClient.DownloadString(url);
 
 
             }
+            
         }
+
+       
+    }
+        
     }
 }
