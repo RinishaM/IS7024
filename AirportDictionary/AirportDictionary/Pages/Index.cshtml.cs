@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
-using QuickTypeCity;
+using CityDetails;
 
 namespace AirportDictionary.Pages
 {
@@ -26,10 +26,10 @@ namespace AirportDictionary.Pages
             using (var webClient = new System.Net.WebClient())
             {
 
-                //IDictionary<long, QuickTypeCity.Welcome> allCities = new Dictionary<long, QuickTypeCity.Welcome>();
+                //IDictionary<long, CityDetails.Welcome> allCities = new Dictionary<long, CityDetails.Welcome>();
 
                 string cityJson = webClient.DownloadString("https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json");
-                QuickTypeCity.Welcome[] allCity = QuickTypeCity.Welcome.FromJson(cityJson);
+                CityDetails.Welcome[] allCity = CityDetails.Welcome.FromJson(cityJson);
 
                 ViewData["Welcome"] = allCity;
 
@@ -39,11 +39,11 @@ namespace AirportDictionary.Pages
 
                 //}
 
-                // QuickTypeAirport.Airport[] allAirport = QuickTypeAirport.Airport.FromJson(airportJson);
+                // AirportDetails.Airport[] allAirport = AirportDetails.Airport.FromJson(airportJson);
 
 
                 string airportJson = webClient.DownloadString("https://pkgstore.datahub.io/core/airport-codes/airport-codes_json/data/552f9a534537e5a2f7a8b0584dad7e77/airport-codes_json.json");
-                var allAirport = QuickTypeAirport.Airport.FromJson(airportJson);
+                var allAirport = AirportDetails.Airport.FromJson(airportJson);
 
                 //JSchema schema = JSchema.Parse(System.IO.File.ReadAllText("CitySchema.json"));
                 //JObject jsonObject = JObject.Parse(cityJson);
@@ -55,11 +55,7 @@ namespace AirportDictionary.Pages
 
 
 
-
-
-
-
-
+                                          
             }
         }
     }

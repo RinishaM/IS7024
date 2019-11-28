@@ -2,25 +2,25 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    var cities = (QuickTypeCity.Welcome[])ViewData["Welcome"];
+    var cities = (CityDetails.Welcome[])ViewData["Welcome"];
 }
 
-
+  
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Welcome to Airport Dictionary</h1>
     <table border="1" width="90%">
         <tr>
             <th>Country</th>
-            <th>GeoNameId</th>
+            <th>GeoName Id</th>
             <th>Name</th>
-            <th>SubCountry</th>
+            <th>State/City</th>
         </tr>
         @{
-            @foreach (QuickTypeCity.Welcome city in cities)
+            @foreach (CityDetails.Welcome city in cities)
             {
                 <tr>
                     <td>@city.Country</td>
-                    <td>@city.Geonameid</td>
+                    <td>@city.GeoNameID</td>
                     <td>@city.Name</td>
                     <td>@city.Subcountry</td>
                 </tr>
