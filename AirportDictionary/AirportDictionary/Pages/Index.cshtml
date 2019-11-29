@@ -2,30 +2,61 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    var cities = (CityDetails.Welcome[])ViewData["Welcome"];
+    List<AirportDetails.Airport> requiredAirports = (List<AirportDetails.Airport>)ViewData["RequiredAirports"];
+    CityDetails.City city = (CityDetails.City)ViewData["City"];
 }
 
-  
-<div class="text-center">
-    <h1 class="display-4">Welcome to Airport Dictionary</h1>
-    <table border="1" width="90%">
-        <tr>
-            <th>Country</th>
-            <th>GeoName Id</th>
-            <th>Name</th>
-            <th>State/City</th>
-        </tr>
-        @{
-            @foreach (CityDetails.Welcome city in cities)
-            {
+<h1>Enter City</h1>
+
+<form action="" method="POST">
+    <div class="form-group">
+        <label class="control-label" for="search"><strong></strong></label>
+        <input type="text" class="form-control" name="search" id="search" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Enter City" class="btn btn-danger" />
+    </div>
+</form>
+
+@if (Model.SearchCompleted)
+
+{
+    <div class="text-center">
+        <h2 class="display-4">Airport Dictionary</h2>
+        <h4>@city.Name, @city.Country, @city.Subcountry</h4>
+        <br />
+        <table class="table table-bordered table-striped">
+            <thead>
                 <tr>
-                    <td>@city.Country</td>
-                    <td>@city.GeoNameID</td>
-                    <td>@city.Name</td>
-                    <td>@city.Subcountry</td>
+                    <th>Airport Name</th>
+                    <th>Type</th>
+                    <th>Local Code</th>
+                    <th>Elevation (in ft.)</th>
                 </tr>
-            }
-        }
-    </table>
-    <br />
-</div>
+            </thead>
+            <tbody>
+                @if (requiredAirports.Count > 0)
+                {
+                    @foreach (AirportDetails.Airport airport in requiredAirports)
+                    {
+                        <tr>
+                            <td>@airport.Name</td>
+                            <td>@airport.Type</td>
+                            <td>@airport.LocalCode</td>
+                            <td>@airport.ElevationFeet</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr class="danger">
+                        <td colspan="4" class="text-center">
+                            No results found for term "@Model.Search"
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+    </div>
+}

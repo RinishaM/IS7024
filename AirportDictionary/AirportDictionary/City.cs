@@ -1,15 +1,12 @@
-﻿
-
-namespace CityDetails
+﻿namespace CityDetails
 {
     using System;
     using System.Collections.Generic;
-
     using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class Welcome
+    public partial class City
     {
         [JsonProperty("country")]
         public string Country { get; set; }
@@ -24,14 +21,14 @@ namespace CityDetails
         public string Subcountry { get; set; }
     }
 
-    public partial class Welcome
+    public partial class City
     {
-        public static Welcome[] FromJson(string json) => JsonConvert.DeserializeObject<Welcome[]>(json, CityDetails.Converter.Settings);
+        public static City[] FromJson(string json) => JsonConvert.DeserializeObject<City[]>(json, CityDetails.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Welcome[] self) => JsonConvert.SerializeObject(self, CityDetails.Converter.Settings);
+        public static string ToJson(this City[] self) => JsonConvert.SerializeObject(self, CityDetails.Converter.Settings);
     }
 
     internal static class Converter
