@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Aishwarya\\MSIS\\Flex2\\XML_WebServices\\FinalProject\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {}
+    "C:\\Users\\sneha\\source\\repos\\Final_project\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {}
   },
   "projects": {
-    "E:\\Aishwarya\\MSIS\\Flex2\\XML_WebServices\\FinalProject\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {
+    "C:\\Users\\sneha\\source\\repos\\Final_project\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Aishwarya\\MSIS\\Flex2\\XML_WebServices\\FinalProject\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
+        "projectUniqueName": "C:\\Users\\sneha\\source\\repos\\Final_project\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
         "projectName": "AirportDictionary",
-        "projectPath": "E:\\Aishwarya\\MSIS\\Flex2\\XML_WebServices\\FinalProject\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
-        "packagesPath": "C:\\Users\\Ash\\.nuget\\packages\\",
-        "outputPath": "E:\\Aishwarya\\MSIS\\Flex2\\XML_WebServices\\FinalProject\\AirportDictionary\\AirportDictionary\\obj\\",
+        "projectPath": "C:\\Users\\sneha\\source\\repos\\Final_project\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
+        "packagesPath": "C:\\Users\\sneha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sneha\\source\\repos\\Final_project\\AirportDictionary\\AirportDictionary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sneha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
