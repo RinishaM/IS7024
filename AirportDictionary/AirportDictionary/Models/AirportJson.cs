@@ -13,22 +13,22 @@ namespace AirportDictionary.Models
         public string Continent { get; set; }
 
 
-        public string Coordinates { get; set; }
+        //public string Coordinates { get; set; }
 
 
         public long ElevationFeet { get; set; }
 
 
-        public string GpsCode { get; set; }
+        //public string GpsCode { get; set; }
 
 
-        public string Ident { get; set; }
+       // public string Ident { get; set; }
 
 
-        public string IsoCountry { get; set; }
+       // public string IsoCountry { get; set; }
 
 
-        public string IsoRegion { get; set; }
+       // public string IsoRegion { get; set; }
 
 
         public string LocalCode { get; set; }

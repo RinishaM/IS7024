@@ -28,31 +28,47 @@ namespace AirportDictionary.Controllers
             string cityJson = GetData("https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json");
             City[] allCity = City.FromJson(cityJson);
 
-            foreach (Airport airport in allAirport)
+            foreach (City city in allCity)
             {
-
-                AirportJson aj = new AirportJson();
-                aj.IsoCountry = airport.IsoCountry;
-                aj.Coordinates = airport.Coordinates;
-                aj.GpsCode = airport.GpsCode;
-                aj.IsoRegion = airport.IsoRegion;
-                airportsOfRequiredCity.Add(aj);
+                //if(city.Subcountry== "Ohio")
+                //{
+                    foreach (Airport airport in allAirport)
+                    {
+                        if (airport.Municipality != null)
+                        {
+                            if (city.Name.ToLower() == airport.Municipality.ToLower())
+                            {
+                                AirportJson aj = new AirportJson();
+                                aj.Continent = airport.Continent;
+                                aj.Country = city.Country;
+                                aj.SubCountry = city.Subcountry;
+                                aj.Municipality = airport.Municipality;
+                                aj.GeoNameId = city.GeoNameID;
+                                aj.Name = airport.Name;
+                                aj.Type = airport.Type;
+                                aj.LocalCode = airport.LocalCode;
+                                aj.ElevationFeet = airport.ElevationFeet;
+                                airportsOfRequiredCity.Add(aj);
+                            }
+                        }
+                    //}
 
             }
+        }
 
 
             return airportsOfRequiredCity;
         }
-        public string GetData(string endpoint)
+    public string GetData(string endpoint)
+    {
+        string downloadedJson;
+        using (WebClient webClient = new WebClient())
         {
-            string downloadedJson;
-            using (WebClient webClient = new WebClient())
-            {
-                downloadedJson = webClient.DownloadString(endpoint);
-            }
-            return downloadedJson;
+            downloadedJson = webClient.DownloadString(endpoint);
         }
-
-
+        return downloadedJson;
     }
+
+
+}
 }
