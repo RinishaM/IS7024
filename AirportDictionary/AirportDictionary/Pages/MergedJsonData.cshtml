@@ -1,0 +1,63 @@
+﻿@page
+@model MergedJsonDataModel
+@{
+    ViewData["Title"] = "Home page";
+     //allBrewery = (Brewery.BreweryJson)ViewData["allBrewery"];
+    List<Brewery.BreweryJson> allBrewery = (List<Brewery.BreweryJson>)ViewData["allBrewery"];
+    
+}
+
+<head>
+    <title>Airport Dictionary</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
+
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">List of Breweries</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <table class="table table-border table-dark table-striped table-hover auto-index">
+        <tr>
+            <th>
+                Brewery
+            </th>            
+            <th>
+                Distance
+            </th>
+            <th>
+                Display Phone
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                Rating
+            </th>
+        </tr>
+        @{
+
+
+
+            @foreach (Brewery.BreweryJson brewery in allBrewery)
+
+            {
+                <tr>
+                    <td>@brewery.Name</td>
+                    <td>@brewery.Distance</td>
+                    <td>@brewery.DisplayPhone</td>
+                    <td>@brewery.Phone</td>
+                    <td>@brewery.Price</td>
+                    <td>@brewery.Location.Address1 @brewery.Location.Address2 @brewery.Location.Address3</td>
+                    <td>@brewery.Rating</td>
+
+                </tr>
+            }
+        }
+    </table>
+</div>

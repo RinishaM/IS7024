@@ -2,6 +2,12 @@
     padding: 10px 8px
 }
 
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
 .w3-margin-bottom {
     margin-bottom: 16px !important
 }
@@ -21,9 +27,38 @@
     padding-top: 16px !important;
     padding-bottom: 16px !important
 }
-.table-border{
-    border:2px solid black;
+
+.table-border {
+    border: 2px solid black;
 }
-.table-border th,td{
-    border: 1px solid black;
+
+    .table-border th, td {
+        border: 1px solid black;
+    }
+
+
+.map-container-5 {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+    .map-container-5 iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
 }
