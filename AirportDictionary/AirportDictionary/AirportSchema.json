@@ -1,0 +1,159 @@
+﻿{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "continent",
+      "coordinates",
+      "elevation_ft",
+      "gps_code",
+      "iata_code",
+      "ident",
+      "iso_country",
+      "iso_region",
+      "local_code",
+      "municipality",
+      "name",
+      "type"
+    ],
+    "properties": {
+      "continent": {
+        "$id": "#/items/properties/continent",
+        "type": [ "string", "null" ],
+        "title": "The Continent Schema",
+        "default": "",
+        "examples": [
+          "NA"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 30
+      },
+      "coordinates": {
+        "$id": "#/items/properties/coordinates",
+        "type": [ "string", "null" ],
+        "title": "The Coordinates Schema",
+        "default": "",
+        "examples": [
+          "-74.93360137939453, 40.07080078125"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 100
+      },
+      "elevation_ft": {
+        "$id": "#/items/properties/elevation_ft",
+        "type": [ "string", "null" ],
+        "title": "The Elevation_ft Schema",
+        "default": "",
+        "examples": [
+          "11"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 10
+      },
+      "gps_code": {
+        "$id": "#/items/properties/gps_code",
+        "type": [ "string", "null" ],
+        "title": "The Gps_code Schema",
+        "default": "",
+        "examples": [
+          "00A"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 10
+      },
+      "iata_code": {
+        "$id": "#/items/properties/iata_code",
+        "type": [ "string", "null" ],
+        "title": "The Iata_code Schema",
+        "default": null,
+        "examples": [
+          null
+        ],
+        "maxLength": 10
+      },
+      "ident": {
+        "$id": "#/items/properties/ident",
+        "type": [ "string", "null" ],
+        "title": "The Ident Schema",
+        "default": "",
+        "examples": [
+          "00A"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 10
+      },
+      "iso_country": {
+        "$id": "#/items/properties/iso_country",
+        "type": [ "string", "null" ],
+        "title": "The Iso_country Schema",
+        "default": "",
+        "examples": [
+          "US"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 5
+      },
+      "iso_region": {
+        "$id": "#/items/properties/iso_region",
+        "type": [ "string", "null" ],
+        "title": "The Iso_region Schema",
+        "default": "",
+        "examples": [
+          "US-PA"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 50
+      },
+      "local_code": {
+        "$id": "#/items/properties/local_code",
+        "type": [ "string", "null" ],
+        "title": "The Local_code Schema",
+        "default": "",
+        "examples": [
+          "00A"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 30
+      },
+      "municipality": {
+        "$id": "#/items/properties/municipality",
+        "type": [ "string", "null" ],
+        "title": "The Municipality Schema",
+        "default": "",
+        "examples": [
+          "Bensalem"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 100
+      },
+      "name": {
+        "$id": "#/items/properties/name",
+        "type": [ "string", "null" ],
+        "title": "The Name Schema",
+        "default": "",
+        "examples": [
+          "Total Rf Heliport"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 200
+      },
+      "type": {
+        "$id": "#/items/properties/type",
+        "type": [ "string", "null" ],
+        "title": "The Type Schema",
+        "default": "",
+        "examples": [
+          "heliport"
+        ],
+        "pattern": "^(.*)$",
+        "maxLength": 100
+      }
+    }
+  }
+}

@@ -38,26 +38,44 @@ namespace AirportDictionary.Pages
             City[] allCity = City.FromJson(cityJson);
             string airportJson = GetData("https://pkgstore.datahub.io/core/airport-codes/airport-codes_json/data/552f9a534537e5a2f7a8b0584dad7e77/airport-codes_json.json");
             Airport[] allAirport = Airport.FromJson(airportJson);
-            foreach (Airport airport in allAirport)
-            { 
-                if (airport.Municipality != null)
-                { 
-                if (airport.Municipality.ToLower() == Search.ToLower())
-                {
-                    airportsOfRequiredCity.Add(airport);
-                }
-                }
-            }
-            foreach (City city in allCity)
+
+            string schemastring = System.IO.File.ReadAllText("AirportSchema.json");
+            JSchema schema = JSchema.Parse(schemastring);
+            JArray jsonArray = JArray.Parse(airportJson);
+         //   bool valid = jsonArray.IsValid(schema);
+            IList<string> validationEvents = new List<string>();
+            if (jsonArray.IsValid(schema, out validationEvents))
             {
-                if (city.Name.ToLower() == Search.ToLower())
+                foreach (Airport airport in allAirport)
                 {
-                    newCity = city;
+                    if (airport.Municipality != null)
+                    {
+                        if (airport.Municipality.ToLower() == Search.ToLower())
+                        {
+                            airportsOfRequiredCity.Add(airport);
+                        }
+                    }
                 }
+                foreach (City city in allCity)
+                {
+                    if (city.Name.ToLower() == Search.ToLower())
+                    {
+                        newCity = city;
+                    }
+                }
+                ViewData["RequiredAirports"] = airportsOfRequiredCity;
+                ViewData["City"] = newCity;
+                SearchCompleted = true;
             }
-            ViewData["RequiredAirports"] = airportsOfRequiredCity;
-            ViewData["City"] = newCity;
-            SearchCompleted = true;
+            else
+            {                
+                Console.WriteLine("The JSON data is INVALID!!");
+                foreach (string evt in validationEvents)
+                {
+                    System.Diagnostics.Debug.WriteLine(evt);
+                }
+                // SearchCompleted = false;
+            }
         }
 
         public string GetData(string endpoint)
