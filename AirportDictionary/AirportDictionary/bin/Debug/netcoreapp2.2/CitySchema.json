@@ -1,0 +1,38 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/City"
+  },
+  "definitions": {
+    "City": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "country": {
+          "type": "string"
+        },
+        "geonameid": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "subcountry": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "country",
+        "geonameid",
+        "name",
+        "subcountry"
+      ],
+      "title": "City"
+    }
+  }
+}
