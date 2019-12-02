@@ -23,38 +23,32 @@
                     <tr>
                         <th>S.No.</th>
                         <th>Country</th>
-                        <th>Geo ID</th>
                         <th>State</th>
                         <th>City</th>
+                        <th>Geo ID</th>
                         <th>Airport Name</th>
                         <th>Type</th>
                         <th>Local Code</th>
                         <th>Elevation (in ft.)</th>
-                        <th>Local Code</th>
-                        <th>Coordinates</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (AirportDetails.Airport airport in requiredAirports)
                     {
-                        <tr>
-                            <td>
-                                @{ count++; }
-                                @count
-                            </td>
-                            <td>@allCities.Country</td>
-                            <td>@allCities.GeoNameID</td>
-                            <td>@allCities.Subcountry</td>
-                            <td>@allCities.Name</td>
-                            <td>@airport.Name</td>
-                            <td>@airport.Type</td>
-                            <td>@airport.LocalCode</td>
-                            <td>@airport.ElevationFeet</td>
-                            <td>@airport.LocalCode</td>
-                            <td>@airport.Coordinates</td>
-
-
-                        </tr>
+                    <tr>
+                        <td>
+                            @{ count++; }
+                            @count
+                        </td>
+                        <td>@allCities.Country</td>
+                        <td>@allCities.Subcountry</td>
+                        <td>@allCities.Name</td>
+                        <td>@allCities.GeoNameID</td>
+                        <td>@airport.Name</td>
+                        <td>@airport.Type</td>
+                        <td>@airport.LocalCode</td>
+                        <td>@airport.ElevationFeet</td>
+                    </tr>
                     }
                     }
                 </tbody>
