@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sneha\\source\\repos\\Final_project\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {}
+    "C:\\Users\\anami\\Source\\Repos\\FinalProject\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sneha\\source\\repos\\Final_project\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {
+    "C:\\Users\\anami\\Source\\Repos\\FinalProject\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sneha\\source\\repos\\Final_project\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
+        "projectUniqueName": "C:\\Users\\anami\\Source\\Repos\\FinalProject\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
         "projectName": "AirportDictionary",
-        "projectPath": "C:\\Users\\sneha\\source\\repos\\Final_project\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
-        "packagesPath": "C:\\Users\\sneha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sneha\\source\\repos\\Final_project\\AirportDictionary\\AirportDictionary\\obj\\",
+        "projectPath": "C:\\Users\\anami\\Source\\Repos\\FinalProject\\AirportDictionary\\AirportDictionary\\AirportDictionary.csproj",
+        "packagesPath": "C:\\Users\\anami\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anami\\Source\\Repos\\FinalProject\\AirportDictionary\\AirportDictionary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sneha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anami\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
