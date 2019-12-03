@@ -5,53 +5,52 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
 
-<h4>AirportAddition</h4>
+<h4 class="display-4 text-white">Airport Addition</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="AirportAddition.airportName" class="control-label"></label>
+                <label asp-for="AirportAddition.airportName" class="control-label text-white bg-danger"></label>
                 <input asp-for="AirportAddition.airportName" class="form-control" />
-                <span asp-validation-for="AirportAddition.airportName" class="text-danger"></span>
+                <span asp-validation-for="AirportAddition.airportName" class="text-danger  w3-red"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AirportAddition.airportType" class="control-label"></label>
+                <label asp-for="AirportAddition.airportType" class="control-label text-white bg-danger"></label>
                 <input asp-for="AirportAddition.airportType" class="form-control" />
                 <span asp-validation-for="AirportAddition.airportType" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AirportAddition.city" class="control-label"></label>
+                <label asp-for="AirportAddition.city" class="control-label text-white bg-danger"></label>
                 <input asp-for="AirportAddition.city" class="form-control" />
                 <span asp-validation-for="AirportAddition.city" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AirportAddition.state" class="control-label"></label>
+                <label asp-for="AirportAddition.state" class="control-label text-white bg-danger"></label>
                 <input asp-for="AirportAddition.state" class="form-control" />
                 <span asp-validation-for="AirportAddition.state" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AirportAddition.country" class="control-label"></label>
+                <label asp-for="AirportAddition.country" class="control-label text-white bg-danger"></label>
                 <input asp-for="AirportAddition.country" class="form-control" />
                 <span asp-validation-for="AirportAddition.country" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AirportAddition.elevation" class="control-label"></label>
+                <label asp-for="AirportAddition.elevation" class="control-label text-white bg-danger"></label>
                 <input asp-for="AirportAddition.elevation" class="form-control" />
                 <span asp-validation-for="AirportAddition.elevation" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn text-white bg-danger" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index" class=" text-white bg-danger">Back to List</a>
 </div>
 
 @section Scripts {
