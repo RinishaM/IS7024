@@ -1,0 +1,61 @@
+﻿@page
+@model AirportDictionary.Pages.NewAirports.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportAddition[0].airportName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportAddition[0].airportType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportAddition[0].city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportAddition[0].state)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportAddition[0].country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirportAddition[0].elevation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.AirportAddition) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.airportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.airportType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.state)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.elevation)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
