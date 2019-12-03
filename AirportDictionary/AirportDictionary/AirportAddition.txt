@@ -1,1 +1,2 @@
 KentuckyNew,Heliport,Cincinnati,Ohio,US,1050
+KentuckyTest2,Heliport,Cincinnati,Ohio,US,108
